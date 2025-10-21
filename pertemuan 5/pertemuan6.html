@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Kelulusan</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+    }
+    label { 
+      display: block; 
+      margin-top: 10px; 
+    }
+    input, button { 
+      margin-top: 5px; 
+      padding: 5px; 
+    }
+    #hasil { 
+      margin-top: 20px; 
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      background-color: #f9f9f9; 
+    }
+  </style>
+</head>
+<body>
+  <h2>Cek Status Kelulusan</h2>
+
+  <label for="nilaiteori">Nilai Teori:</label>
+  <input type="number" id="nilaiteori" placeholder="Masukkan nilai teori">
+
+  <label for="nilaipraktik">Nilai Praktik:</label>
+  <input type="number" id="nilaipraktik" placeholder="Masukkan nilai praktik">
+
+  <button onclick="cekKelulusan()">Cek Status</button>
+
+  <div id="hasil"></div>
+
+  <script>
+    function cekKelulusan() {
+      // Ambil nilai dari input
+      const teori = parseFloat(document.getElementById("nilaiteori").value);
+      const praktik = parseFloat(document.getElementById("nilaipraktik").value);
+      const hasilDiv = document.getElementById("hasil");
+
+      // Validasi input
+      if (isNaN(teori) || isNaN(praktik)) {
+        hasilDiv.innerHTML = "<span style='color:red;'>Harap masukkan kedua nilai dengan benar.</span>";
+        return;
+      }
+
+      // Hitung rata-rata
+      const rataRata = (teori + praktik) / 2;
+
+      // Tentukan status
+      let status = "";
+      if (rataRata >= 75) {
+        status = "✅ LULUS";
+      } else {
+        status = "❌ TIDAK LULUS - Perlu Remedial";
+      }
+
+      // Tampilkan hasil
+      hasilDiv.innerHTML = `
+        <strong>Nilai Teori:</strong> ${teori}<br>
+        <strong>Nilai Praktik:</strong> ${praktik}<br>
+        <strong>Rata-rata:</strong> ${rataRata}<br>
+        <strong>Status:</strong> ${status}
+      `;
+    }
+  </script>
+</body>
+</html>

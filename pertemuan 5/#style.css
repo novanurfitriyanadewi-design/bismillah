@@ -1,0 +1,32 @@
+ body {
+    background-image: url(images.jpg); /* Gambar Sumenep */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  background: linear-gradient(to right, #001f4d, #3399ff);
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #003366;
+}
