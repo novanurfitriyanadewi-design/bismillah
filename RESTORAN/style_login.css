@@ -1,0 +1,90 @@
+/* Background halaman */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Box login */
+.container {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Judul */
+.container h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Tab menu (login - register) */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-menu a {
+    width: 120px;
+    padding: 10px 0;
+    border: 2px solid #007bff;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.tab-menu a.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Input box */
+.inputBox {
+    margin-bottom: 15px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #d0d0ff;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.inputBox input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Tombol login */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #005ecb;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
